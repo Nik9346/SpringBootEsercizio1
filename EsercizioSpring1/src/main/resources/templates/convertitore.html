@@ -7,7 +7,7 @@
 </head>
 <body>
 	<h1>Benvenuto nel converitore di Temperatura</h1>
-	<div th:if="${showDiv}" class="container">
+	<div th:if="${showDiv==true}" class="container">
 		<div class="temp-cell display-flex">
 			<img th:src="@{image/fahrenheit.png}" alt="logo di Fahrenheit">
 			<h3
@@ -19,7 +19,7 @@
 				th:text="'La temperatura in gradi Kelvin è ' + ${gradiKelvinString}"></h3>
 		</div>
 	</div>
-	<div th:unless="${showDiv}" class="container">
+	<div th:if="${showDiv==false}" class="container">
 			<div class="temp-cell display-flex width-100">
 				<h3 th:text="${datiErrati}"></h3>
 			</div>
