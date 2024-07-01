@@ -1,0 +1,37 @@
+h1 {
+	text-align: center;
+	margin-top: 1em;
+	color: gray
+}
+
+img {
+	max-width: 10%;
+}
+
+.container {
+	display: flex;
+	justify-content: space-between;
+}
+
+.temp-cell {
+	width: 50%;
+	margin: 1.5em;
+	padding: .5em;
+	border: 1px solid black;
+	border-radius: 8px;
+	text-align: center;
+	color: lightskyblue;
+	font-size: 1.7em;
+	font-weight: bold;
+	background: linear-gradient(0deg, #0055ff 0%, #06bcea 100%);
+	box-shadow: 5px 5px 15px 5px #000000;
+}
+
+.display-flex {
+	display: flex;
+	justify-content: space-around;
+}
+
+.width-100 {
+	width: 100%;
+}
