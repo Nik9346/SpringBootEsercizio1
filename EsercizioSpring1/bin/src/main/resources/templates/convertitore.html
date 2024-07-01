@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title th:text="${titolo}">Insert title here</title>
+<link th:href="@{css/style.css}" rel="stylesheet"></link>
+</head>
+<body>
+	<h1>Benvenuto nel converitore di Temperatura</h1>
+	<div th:if="${showDiv}" class="container">
+		<div class="temp-cell display-flex">
+			<img th:src="@{image/fahrenheit.png}" alt="logo di Fahrenheit">
+			<h3
+				th:text="'La temperatura in gradi Farhenheit è ' + ${gradiFahrenheitString}"></h3>
+		</div>
+		<div class="temp-cell display-flex">
+			<img th:src="@{image/gradiK.jpg}" alt="logo di Kelvin">
+			<h3
+				th:text="'La temperatura in gradi Kelvin è ' + ${gradiKelvinString}"></h3>
+		</div>
+	</div>
+	<div th:unless="${showDiv}" class="container">
+			<div class="temp-cell display-flex width-100">
+				<h3 th:text="${datiErrati}"></h3>
+			</div>
+		</div>
+</body>
+</html>
